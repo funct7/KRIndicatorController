@@ -18,6 +18,7 @@
 		D1B74AAC20F58DE10006231C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B74AAB20F58DE10006231C /* Assets.xcassets */; };
 		D1B74AAF20F58DE10006231C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B74AAD20F58DE10006231C /* LaunchScreen.storyboard */; };
 		D1B74AB520F594D40006231C /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74AB420F594D40006231C /* CustomIndicator.swift */; };
+		D1B74AB720F59FD40006231C /* KRIndicatorController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B74A7920F5765C0006231C /* KRIndicatorController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B74AB720F59FD40006231C /* KRIndicatorController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,7 @@
 				D1B74A8620F5765C0006231C /* KRIndicatorControllerTests */,
 				D1B74AA320F58DDE0006231C /* KRIndicatorControllerExample */,
 				D1B74A7A20F5765C0006231C /* Products */,
+				D1B74AB620F59FD40006231C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +130,13 @@
 				D1B74AB020F58DE10006231C /* Info.plist */,
 			);
 			path = KRIndicatorControllerExample;
+			sourceTree = "<group>";
+		};
+		D1B74AB620F59FD40006231C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

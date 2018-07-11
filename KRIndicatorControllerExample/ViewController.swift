@@ -73,12 +73,16 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction private func switchViewAction(_ sender: Any) {
+    @IBAction private func switchViewAction(_ sender: UIButton) {
         useDefault = !useDefault
         
         if useDefault {
+            sender.setTitle("View A", for: .normal)
+            ic.delay = 0.2
             ic.indicatorItem = DefaultIndicator()
         } else {
+            sender.setTitle("View B", for: .normal)
+            ic.delay = 0.3
             ic.indicatorItem = CustomIndicator()
         }
     }

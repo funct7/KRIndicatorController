@@ -11,40 +11,29 @@ import KRIndicatorController
 
 class CustomIndicator: IndicatorItem {
     
-    var indicatorView: UIView { return slider }
+    var indicatorView: UIView { return sw }
     
-    private let slider: UISlider
+    private let sw: UISwitch
     
     init() {
         // I don't know why anyone would do this,
         // but this is to demonstrate that you can use any view.
-        slider = UISlider()
-        slider.value = 0.0
+        sw = UISwitch()
+        sw.center.x = UIScreen.main.bounds.midX
+        sw.center.y = UIScreen.main.bounds.midY
+        sw.isOn = false
     }
     
     func animateShow() {
-        let anim: (Float) -> () -> Void = { (val) in
-            return { self.slider.value = val }
-        }
-        
-        UIView.animate(withDuration: 0.05) {
-            anim(1.0)()
-            UIView.animate(withDuration: 0.05,
-                           animations: anim(0.0))
+        UIView.animate(withDuration: 0.2) {
+            self.sw.isOn = true
         }
     }
     
     func animateHide() {
-        let anim: (Float) -> () -> Void = { (val) in
-            return { self.slider.value = val }
+        UIView.animate(withDuration: 0.2) {
+            self.sw.isOn = false
         }
-        
-        UIView.animate(withDuration: 0.05) {
-            anim(1.0)()
-            UIView.animate(withDuration: 0.05,
-                           animations: anim(0.0))
-        }
-
     }
     
 }
