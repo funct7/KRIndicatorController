@@ -92,7 +92,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "KRIndicatorController", "KRIndicatorController/**/*.{h,m,swift}"
+  s.source_files  = "KRIndicatorController"
+  s.swift_version = "4.1"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
