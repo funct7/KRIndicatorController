@@ -12,6 +12,12 @@
 		D1B74A9420F576C90006231C /* IndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74A9320F576C90006231C /* IndicatorController.swift */; };
 		D1B74A9820F578DC0006231C /* IndicatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74A9720F578DC0006231C /* IndicatorItem.swift */; };
 		D1B74A9A20F579480006231C /* DefaultIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74A9920F579480006231C /* DefaultIndicator.swift */; };
+		D1B74AA520F58DDE0006231C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74AA420F58DDE0006231C /* AppDelegate.swift */; };
+		D1B74AA720F58DDE0006231C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74AA620F58DDE0006231C /* ViewController.swift */; };
+		D1B74AAA20F58DDE0006231C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B74AA820F58DDE0006231C /* Main.storyboard */; };
+		D1B74AAC20F58DE10006231C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B74AAB20F58DE10006231C /* Assets.xcassets */; };
+		D1B74AAF20F58DE10006231C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B74AAD20F58DE10006231C /* LaunchScreen.storyboard */; };
+		D1B74AB520F594D40006231C /* CustomIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74AB420F594D40006231C /* CustomIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,14 @@
 		D1B74A9320F576C90006231C /* IndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorController.swift; sourceTree = "<group>"; };
 		D1B74A9720F578DC0006231C /* IndicatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorItem.swift; sourceTree = "<group>"; };
 		D1B74A9920F579480006231C /* DefaultIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIndicator.swift; sourceTree = "<group>"; };
+		D1B74AA220F58DDE0006231C /* KRIndicatorControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRIndicatorControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B74AA420F58DDE0006231C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1B74AA620F58DDE0006231C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1B74AA920F58DDE0006231C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1B74AAB20F58DE10006231C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1B74AAE20F58DE10006231C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1B74AB020F58DE10006231C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B74AB420F594D40006231C /* CustomIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1B74A9F20F58DDE0006231C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +80,7 @@
 			children = (
 				D1B74A7B20F5765C0006231C /* KRIndicatorController */,
 				D1B74A8620F5765C0006231C /* KRIndicatorControllerTests */,
+				D1B74AA320F58DDE0006231C /* KRIndicatorControllerExample */,
 				D1B74A7A20F5765C0006231C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +90,7 @@
 			children = (
 				D1B74A7920F5765C0006231C /* KRIndicatorController.framework */,
 				D1B74A8220F5765C0006231C /* KRIndicatorControllerTests.xctest */,
+				D1B74AA220F58DDE0006231C /* KRIndicatorControllerExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +113,20 @@
 				D1B74A8920F5765C0006231C /* Info.plist */,
 			);
 			path = KRIndicatorControllerTests;
+			sourceTree = "<group>";
+		};
+		D1B74AA320F58DDE0006231C /* KRIndicatorControllerExample */ = {
+			isa = PBXGroup;
+			children = (
+				D1B74AA420F58DDE0006231C /* AppDelegate.swift */,
+				D1B74AA620F58DDE0006231C /* ViewController.swift */,
+				D1B74AB420F594D40006231C /* CustomIndicator.swift */,
+				D1B74AA820F58DDE0006231C /* Main.storyboard */,
+				D1B74AAB20F58DE10006231C /* Assets.xcassets */,
+				D1B74AAD20F58DE10006231C /* LaunchScreen.storyboard */,
+				D1B74AB020F58DE10006231C /* Info.plist */,
+			);
+			path = KRIndicatorControllerExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +178,23 @@
 			productReference = D1B74A8220F5765C0006231C /* KRIndicatorControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D1B74AA120F58DDE0006231C /* KRIndicatorControllerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B74AB120F58DE10006231C /* Build configuration list for PBXNativeTarget "KRIndicatorControllerExample" */;
+			buildPhases = (
+				D1B74A9E20F58DDE0006231C /* Sources */,
+				D1B74A9F20F58DDE0006231C /* Frameworks */,
+				D1B74AA020F58DDE0006231C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KRIndicatorControllerExample;
+			productName = KRIndicatorControllerExample;
+			productReference = D1B74AA220F58DDE0006231C /* KRIndicatorControllerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,6 +212,9 @@
 					D1B74A8120F5765C0006231C = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					D1B74AA120F58DDE0006231C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = D1B74A7320F5765C0006231C /* Build configuration list for PBXProject "KRIndicatorController" */;
@@ -166,6 +223,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D1B74A6F20F5765C0006231C;
 			productRefGroup = D1B74A7A20F5765C0006231C /* Products */;
@@ -174,6 +232,7 @@
 			targets = (
 				D1B74A7820F5765C0006231C /* KRIndicatorController */,
 				D1B74A8120F5765C0006231C /* KRIndicatorControllerTests */,
+				D1B74AA120F58DDE0006231C /* KRIndicatorControllerExample */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +249,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B74AA020F58DDE0006231C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B74AAF20F58DE10006231C /* LaunchScreen.storyboard in Resources */,
+				D1B74AAC20F58DE10006231C /* Assets.xcassets in Resources */,
+				D1B74AAA20F58DDE0006231C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +283,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1B74A9E20F58DDE0006231C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B74AA720F58DDE0006231C /* ViewController.swift in Sources */,
+				D1B74AA520F58DDE0006231C /* AppDelegate.swift in Sources */,
+				D1B74AB520F594D40006231C /* CustomIndicator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -223,6 +302,25 @@
 			targetProxy = D1B74A8420F5765C0006231C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1B74AA820F58DDE0006231C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B74AA920F58DDE0006231C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1B74AAD20F58DE10006231C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1B74AAE20F58DE10006231C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D1B74A8B20F5765C0006231C /* Debug */ = {
@@ -438,6 +536,42 @@
 			};
 			name = Release;
 		};
+		D1B74AB220F58DE10006231C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
+				INFOPLIST_FILE = KRIndicatorControllerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.KRIndicatorControllerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1B74AB320F58DE10006231C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
+				INFOPLIST_FILE = KRIndicatorControllerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.KRIndicatorControllerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,6 +598,15 @@
 			buildConfigurations = (
 				D1B74A9120F5765C0006231C /* Debug */,
 				D1B74A9220F5765C0006231C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B74AB120F58DE10006231C /* Build configuration list for PBXNativeTarget "KRIndicatorControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B74AB220F58DE10006231C /* Debug */,
+				D1B74AB320F58DE10006231C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
