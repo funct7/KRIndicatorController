@@ -15,10 +15,10 @@ import UIKit
 public protocol IndicatorItem {
  
     /// The activity indicator to be shown.
-    var indicatorView: UIView { get }
+    var view: UIView { get }
     
     /**
-     Animates the `indicatorView` as it appears on the screen.
+     Animates the `view` as it appears on the screen.
      
      Run your own UIView animation blocks or CAAnimations inside the method,
      as this method will *NOT* be run within a UIView animation block.
@@ -32,7 +32,7 @@ public protocol IndicatorItem {
     func animateShow()
     
     /**
-     Animates the `indicatorView` disappearing from screen.
+     Animates the `view` disappearing from screen.
      
      Run your own UIView animation blocks or CAAnimations inside the method,
      as this method will *NOT* be run within a UIView animation block.

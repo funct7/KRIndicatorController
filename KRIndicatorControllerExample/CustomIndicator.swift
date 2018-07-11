@@ -11,7 +11,7 @@ import KRIndicatorController
 
 class CustomIndicator: IndicatorItem {
     
-    var indicatorView: UIView { return sw }
+    var view: UIView { return sw }
     
     private let sw: UISwitch
     

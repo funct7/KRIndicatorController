@@ -69,7 +69,7 @@ public class IndicatorController {
         
         indicatorItem = DefaultIndicator()
         
-        view.addSubview(indicatorItem.indicatorView)
+        view.addSubview(indicatorItem.view)
         
         window = UIWindow(frame: view.frame)
         window.windowLevel = UIWindowLevelAlert
@@ -135,14 +135,14 @@ public class IndicatorController {
     private func overlayTransparentView() {
         window.isHidden = false
         view.isHidden = false
-        indicatorItem.indicatorView.isHidden = true
+        indicatorItem.view.isHidden = true
     }
     
     private func toggleIndicator(_ isOn: Bool) {
         let block: () -> Void = {
             self.window.isHidden = !isOn
             self.view.isHidden = !isOn
-            self.indicatorItem.indicatorView.isHidden = !isOn
+            self.indicatorItem.view.isHidden = !isOn
         }
         
         if isOn {
@@ -160,11 +160,11 @@ public class IndicatorController {
     // MARK: - Indicator Item
     
     private func removeIndicatorItem() {
-        indicatorItem.indicatorView.removeFromSuperview()
+        indicatorItem.view.removeFromSuperview()
     }
     
     private func addIndicatorItem() {
-        view.addSubview(indicatorItem.indicatorView)
+        view.addSubview(indicatorItem.view)
     }
     
 }

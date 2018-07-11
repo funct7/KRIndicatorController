@@ -10,7 +10,7 @@ import UIKit
 
 public struct DefaultIndicator: IndicatorItem {
     
-    public var indicatorView: UIView { return aiView }
+    public var view: UIView { return aiView }
     
     private let aiView: UIActivityIndicatorView
     

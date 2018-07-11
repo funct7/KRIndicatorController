@@ -223,7 +223,7 @@ class KRIndicatorControllerTests: XCTestCase {
         ic.indicatorItem = newItem
         
         XCTAssertFalse(view.subviews.contains(oldIndicator))
-        XCTAssertTrue(view.subviews.contains(newItem.indicatorView))
+        XCTAssertTrue(view.subviews.contains(newItem.view))
     }
     
     private func getView(indicator: IndicatorController) -> UIView {
