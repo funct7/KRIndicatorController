@@ -135,16 +135,25 @@ public class IndicatorController {
     private func overlayTransparentView() {
         window.isHidden = false
         view.isHidden = false
+        indicatorItem.indicatorView.isHidden = true
     }
     
     private func toggleIndicator(_ isOn: Bool) {
-        window.isHidden = !isOn
-        view.isHidden = !isOn
+        let block: () -> Void = {
+            self.window.isHidden = !isOn
+            self.view.isHidden = !isOn
+            self.indicatorItem.indicatorView.isHidden = !isOn
+        }
         
         if isOn {
+            block()
+            
             indicatorItem.animateShow()
         } else {
             indicatorItem.animateHide()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now()+delay,
+                                          execute: block)
         }
     }
     
