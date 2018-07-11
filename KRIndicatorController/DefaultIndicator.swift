@@ -21,6 +21,7 @@ public struct DefaultIndicator: IndicatorItem {
         aiView.color = UIColor.darkGray
         aiView.center.x = UIScreen.main.bounds.midX
         aiView.center.y = UIScreen.main.bounds.midY
+        aiView.hidesWhenStopped = false
     }
     
     public func animateShow() {
@@ -32,11 +33,12 @@ public struct DefaultIndicator: IndicatorItem {
     }
     
     public func animateHide() {
-        aiView.stopAnimating()
+        let anim = { self.aiView.alpha = 0.0 },
+            comp = { (_: Bool) in self.aiView.stopAnimating() }
         
-        UIView.animate(withDuration: 0.15) {
-            self.aiView.alpha = 0.0
-        }
+        UIView.animate(withDuration: 0.15,
+                       animations: anim,
+                       completion: comp)
     }
     
 }
