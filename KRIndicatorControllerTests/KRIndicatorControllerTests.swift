@@ -213,5 +213,26 @@ class KRIndicatorControllerTests: XCTestCase {
         
         wait(for: [exp2], timeout: 2.0)
     }
+    
+    func testSwitchIndicator() {
+        let ic = IndicatorController()
+        let view = getView(indicator: ic)
+        let oldIndicator = view.subviews[0]
+        let newItem = DefaultIndicator()
+        
+        ic.indicatorItem = newItem
+        
+        XCTAssertFalse(view.subviews.contains(oldIndicator))
+        XCTAssertTrue(view.subviews.contains(newItem.indicatorView))
+    }
+    
+    private func getView(indicator: IndicatorController) -> UIView {
+        let mirror = Mirror(reflecting: indicator)
+        for (label, value) in mirror.children {
+            guard label == "view" else { continue }
+            return value as! UIView
+        }
+        fatalError("failed to get view")
+    }
 
 }

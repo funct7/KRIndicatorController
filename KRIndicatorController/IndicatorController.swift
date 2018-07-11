@@ -19,7 +19,10 @@ public class IndicatorController {
     private let view: UIView
     
     /// The indicator item to display.
-    public var indicatorItem: IndicatorItem
+    public var indicatorItem: IndicatorItem {
+        willSet { removeIndicatorItem() }
+        didSet { addIndicatorItem() }
+    }
     
     /**
      Blocks user interaction during task.
@@ -143,6 +146,16 @@ public class IndicatorController {
         } else {
             indicatorItem.animateHide()
         }
+    }
+    
+    // MARK: - Indicator Item
+    
+    private func removeIndicatorItem() {
+        indicatorItem.indicatorView.removeFromSuperview()
+    }
+    
+    private func addIndicatorItem() {
+        view.addSubview(indicatorItem.indicatorView)
     }
     
 }
