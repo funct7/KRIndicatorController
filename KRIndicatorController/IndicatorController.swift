@@ -15,8 +15,11 @@ public class IndicatorController {
     
     private let window: UIWindow
     
+    /// The placeholder root view controller of the window.
+    private let vc = UIViewController()
+    
     /// A transparent background view.
-    private let view: UIView
+    private var view: UIView { return vc.view! }
     
     /// The indicator item to display.
     public var indicatorItem: IndicatorItem {
@@ -65,15 +68,14 @@ public class IndicatorController {
     }
     
     public init() {
-        view = UIView(frame: UIScreen.main.bounds)
-        
         indicatorItem = DefaultIndicator()
         
-        view.addSubview(indicatorItem.view)
+        vc.view.addSubview(indicatorItem.view)
         
-        window = UIWindow(frame: view.frame)
+        window = UIWindow(frame: vc.view.frame)
         window.windowLevel = UIWindowLevelAlert
-        window.addSubview(view)
+        window.rootViewController = vc
+        window.isHidden = true
     }
     
     /**
