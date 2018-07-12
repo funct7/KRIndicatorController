@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D149D9CB20F6DDEC00C85E5F /* KRIndicatorController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1B74A7920F5765C0006231C /* KRIndicatorController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D1B74A8320F5765C0006231C /* KRIndicatorController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B74A7920F5765C0006231C /* KRIndicatorController.framework */; };
 		D1B74A8820F5765C0006231C /* KRIndicatorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74A8720F5765C0006231C /* KRIndicatorControllerTests.swift */; };
 		D1B74A9420F576C90006231C /* IndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B74A9320F576C90006231C /* IndicatorController.swift */; };
@@ -22,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D149D9CC20F6DDEC00C85E5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B74A7020F5765C0006231C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B74A7820F5765C0006231C;
+			remoteInfo = KRIndicatorController;
+		};
 		D1B74A8420F5765C0006231C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1B74A7020F5765C0006231C /* Project object */;
@@ -30,6 +38,20 @@
 			remoteInfo = KRIndicatorController;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D149D9CE20F6DDEC00C85E5F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D149D9CB20F6DDEC00C85E5F /* KRIndicatorController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D1B74A7920F5765C0006231C /* KRIndicatorController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRIndicatorController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,10 +217,12 @@
 				D1B74A9E20F58DDE0006231C /* Sources */,
 				D1B74A9F20F58DDE0006231C /* Frameworks */,
 				D1B74AA020F58DDE0006231C /* Resources */,
+				D149D9CE20F6DDEC00C85E5F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D149D9CD20F6DDEC00C85E5F /* PBXTargetDependency */,
 			);
 			name = KRIndicatorControllerExample;
 			productName = KRIndicatorControllerExample;
@@ -306,6 +330,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D149D9CD20F6DDEC00C85E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B74A7820F5765C0006231C /* KRIndicatorController */;
+			targetProxy = D149D9CC20F6DDEC00C85E5F /* PBXContainerItemProxy */;
+		};
 		D1B74A8520F5765C0006231C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D1B74A7820F5765C0006231C /* KRIndicatorController */;
@@ -367,7 +396,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -430,7 +459,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -462,7 +491,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KRIndicatorController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -490,7 +519,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = KRIndicatorController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -549,6 +578,7 @@
 		D1B74AB220F58DE10006231C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
@@ -567,6 +597,7 @@
 		D1B74AB320F58DE10006231C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
