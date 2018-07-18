@@ -33,12 +33,14 @@ class ViewController: UIViewController {
     private let ic = IndicatorController()
 
     private func beginOperation() {
-        // Begin some operation
         ic.increment()
+
+        // Begin some operation
     }
     
     private func endOperation() {
         // End some operation
+        
         ic.decrement()
     }
 
