@@ -50,13 +50,21 @@ public class IndicatorController {
         didSet { toggleIndicator(isShowing) }
     }
     
-    /// The delay before showing and hiding the indicator, in milliseconds.
+    /**
+     The delay before showing and hiding the indicator, in seconds.
+     
+     The default is `0.2`; i.e. 200 ms.
+     */
     public var delay: Double = 0.2
     
     /**
      The number of tasks running.
      
      - Invariant: `count >= 0`
+     
+     - Important:
+        It is the responsibility of the client to balance
+        calls to `increment()` and `decrement()`.
      */
     private var count = 0
     
@@ -97,7 +105,7 @@ public class IndicatorController {
      Decreases the task count.
      
      The indicator is hidden after the time specified in `delay`
-     if the task count goes from 0 to 1.
+     if the task count goes from 1 to 0.
      */
     public func decrement() {
         count -= 1

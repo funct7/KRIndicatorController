@@ -23,11 +23,11 @@ public protocol IndicatorItem {
      Run your own UIView animation blocks or CAAnimations inside the method,
      as this method will *NOT* be run within a UIView animation block.
      
-     - Note:
+     - Warning:
         Make sure the animation duration is less than or equal to
         the `delay` value of the `IndicatorController` object
         this item will be associated to.
-        Othewise, the behavior is undefined.
+        Otherwise, the behavior is undefined.
      */
     func animateShow()
     
@@ -37,11 +37,11 @@ public protocol IndicatorItem {
      Run your own UIView animation blocks or CAAnimations inside the method,
      as this method will *NOT* be run within a UIView animation block.
      
-     - Note:
+     - Warning:
          Make sure the animation duration is less than or equal to
          the `delay` value of the `IndicatorController` object
          this item will be associated to.
-         Othewise, the behavior is undefined.
+         Otherwise, the behavior is undefined.
      */
     func animateHide()
     
