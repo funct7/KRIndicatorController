@@ -229,8 +229,9 @@ class KRIndicatorControllerTests: XCTestCase {
     private func getView(indicator: IndicatorController) -> UIView {
         let mirror = Mirror(reflecting: indicator)
         for (label, value) in mirror.children {
-            guard label == "view" else { continue }
-            return value as! UIView
+            guard label == "vc" else { continue }
+            let vc = value as! UIViewController
+            return vc.view
         }
         fatalError("failed to get view")
     }
