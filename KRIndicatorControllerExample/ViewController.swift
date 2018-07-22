@@ -29,9 +29,8 @@ class ViewController: UIViewController {
 
     @IBAction private func action1(_ sender: Any) {
         // Since `ic.delay` is `0.2`, i.e. 100 ms, the indicator will not show.
-        // However, since `ic.blockInteraction` is `true`,
-        // there will be a transparent window on top,
-        // blocking user interaction for 0.1 seconds.
+        // However, since `ic.isInteractionBlocked` is `true`,
+        // the user interaction will be blocked.
         simulateBeginRequest()
         simulateCallBack(after: 0.1)
     }
@@ -85,6 +84,10 @@ class ViewController: UIViewController {
             ic.delay = 0.3
             ic.indicatorItem = CustomIndicator()
         }
+    }
+    
+    @IBAction private func blockAction(_ sender: UISwitch) {
+        ic.isUserInteractionBlocked = sender.isOn
     }
 
 }

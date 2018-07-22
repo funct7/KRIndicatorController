@@ -28,20 +28,16 @@ public class IndicatorController {
     }
     
     /**
-     Blocks user interaction during task.
-     
-     Although the indicator view is displayed
-     after `delay` milliseconds to avoid flickering,
-     clients may want to immediately block user interaction
-     to avoid unwanted input.
-     
-     Setting this value to `false` means
-     user interaction will be blocked only when
-     the indicator is actually in the view hierarchy.
+     A boolean value that determines whether
+     user interaction with the underlying views
+     is blocked while the indicator is displayed.
      
      The default is `true`.
      */
-    public var blockInteraction: Bool = true
+    public var isUserInteractionBlocked: Bool {
+        get { return window.isUserInteractionEnabled }
+        set { window.isUserInteractionEnabled = newValue }
+    }
     
     /**
      A boolean value telling whether the indicator view is currently showing.
@@ -94,7 +90,7 @@ public class IndicatorController {
      */
     public func increment() {
         if shouldStartTimer {
-            overlayTransparentViewIfNeeded()
+            overlayTransparentView()
             startTimer()
         }
         
@@ -129,15 +125,6 @@ public class IndicatorController {
         isShowing = count > 0
         self.timer = nil
     }
-    
-    /**
-     Overlays a transparent view if `blockInteraction` is `true`.
-     */
-    private func overlayTransparentViewIfNeeded() {
-        guard blockInteraction else { return }
-        overlayTransparentView()
-    }
-    
     
     /**
      Overlays a transparent view to discourage users from interacting with the screen.

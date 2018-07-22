@@ -98,3 +98,24 @@ class ViewController: UIViewController {
 
 }
 ```
+
+#### Block/allow user interaction
+Blocking the user interaction during indicator display:
+
+```swift
+import KRIndicatorController
+
+class ViewController: UIViewController {
+
+    private let ic = IndicatorController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        ic.isUserInteractionBlocked = true // Default is true
+    }
+
+}
+```
+
+Setting `isUserInteractionBlocked` to `false` allows users to interact with the underlying view.
