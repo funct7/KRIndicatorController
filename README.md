@@ -12,7 +12,7 @@
 ## Installation
 `KRIndicatorController` is available through [CocoaPods](http://cocoapods.org/). To install it, simply add the following line to your Podfile:
 ```ruby
-pod 'KRIndicatorController', :git=>'https://github.com/funct7/KRIndicatorController.git', :branch=>'develop'
+pod 'KRIndicatorController'
 ```
 
 Then, run the following command:
